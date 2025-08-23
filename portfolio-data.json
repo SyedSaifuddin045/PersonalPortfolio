@@ -1,0 +1,133 @@
+{
+  "name": "John Doe",
+  "hero": {
+    "greeting": "Hi, I'm John",
+    "title": "Full Stack Developer & UI/UX Enthusiast",
+    "description": "I craft beautiful, functional web experiences with modern technologies. Passionate about clean code, user experience, and innovative solutions."
+  },
+  "about": {
+    "description": "With over 5 years of experience in software development, I specialize in creating robust, scalable web applications. My passion lies in transforming complex problems into elegant, user-friendly solutions. I enjoy working with cutting-edge technologies and collaborating with teams to deliver exceptional digital experiences."
+  },
+  "stats": [
+    {"value": "50+", "label": "Projects Completed"},
+    {"value": "5+", "label": "Years Experience"},
+    {"value": "20+", "label": "Happy Clients"},
+    {"value": "100%", "label": "Client Satisfaction"}
+  ],
+  "skills": {
+    "frontend": [
+      {"name": "React.js", "level": 5},
+      {"name": "TypeScript", "level": 5},
+      {"name": "Next.js", "level": 4},
+      {"name": "Tailwind CSS", "level": 5},
+      {"name": "Vue.js", "level": 3}
+    ],
+    "backend": [
+      {"name": "Node.js", "level": 5},
+      {"name": "Python", "level": 4},
+      {"name": "PostgreSQL", "level": 4},
+      {"name": "MongoDB", "level": 4},
+      {"name": "Express.js", "level": 5}
+    ],
+    "tools": [
+      {"name": "Docker", "level": 4},
+      {"name": "AWS", "level": 4},
+      {"name": "Git", "level": 5},
+      {"name": "Figma", "level": 4},
+      {"name": "Vercel", "level": 5}
+    ]
+  },
+  "projects": [
+    {
+      "id": "ecommerce-platform",
+      "title": "E-Commerce Platform",
+      "description": "A full-stack e-commerce solution with React, Node.js, and PostgreSQL. Features include user authentication, payment processing with Stripe, admin dashboard, real-time inventory management, and advanced analytics.",
+      "technologies": ["React", "Node.js", "PostgreSQL", "Stripe", "Redis"],
+      "category": "web",
+      "images": [
+        "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+        "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+        "https://images.unsplash.com/photo-1556742111-a301076d9d18?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400"
+      ],
+      "githubUrl": "https://github.com/johndoe/ecommerce-platform",
+      "liveUrl": "https://ecommerce-demo.vercel.app"
+    },
+    {
+      "id": "task-manager-app",
+      "title": "Task Manager App",
+      "description": "Cross-platform mobile app built with React Native. Features task scheduling, team collaboration, offline synchronization, push notifications, and project timeline visualization.",
+      "technologies": ["React Native", "Redux", "Firebase", "AsyncStorage"],
+      "category": "mobile",
+      "images": [
+        "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+        "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400"
+      ],
+      "githubUrl": "https://github.com/johndoe/task-manager",
+      "liveUrl": "https://taskmanager-app.com"
+    },
+    {
+      "id": "api-service",
+      "title": "RESTful API Service",
+      "description": "Scalable REST API with comprehensive documentation, rate limiting, monitoring, caching, and microservices architecture. Built with Express.js and deployed on AWS with Docker containers.",
+      "technologies": ["Express.js", "MongoDB", "AWS", "Docker", "Redis"],
+      "category": "api",
+      "images": [
+        "https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+        "https://images.unsplash.com/photo-1627398242454-45a1465c2479?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+        "https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400"
+      ],
+      "githubUrl": "https://github.com/johndoe/api-service",
+      "liveUrl": "https://api.johndoe.dev"
+    },
+    {
+      "id": "portfolio-dashboard",
+      "title": "Analytics Dashboard",
+      "description": "Real-time analytics dashboard with interactive charts, data visualization, and custom reporting. Built with React, D3.js, and WebSocket connections for live data updates.",
+      "technologies": ["React", "D3.js", "WebSocket", "Chart.js", "Node.js"],
+      "category": "web",
+      "images": [
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400"
+      ],
+      "githubUrl": "https://github.com/johndoe/analytics-dashboard",
+      "liveUrl": "https://dashboard.johndoe.dev"
+    },
+    {
+      "id": "social-media-app",
+      "title": "Social Media Platform",
+      "description": "Full-featured social media application with real-time messaging, content sharing, user profiles, and advanced privacy controls. Built with modern web technologies.",
+      "technologies": ["Next.js", "Socket.io", "Prisma", "PostgreSQL", "Cloudinary"],
+      "category": "web",
+      "images": [
+        "https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+        "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400"
+      ],
+      "githubUrl": "https://github.com/johndoe/social-platform",
+      "liveUrl": "https://social.johndoe.dev"
+    },
+    {
+      "id": "fitness-tracker",
+      "title": "Fitness Tracker Mobile App",
+      "description": "Comprehensive fitness tracking app with workout plans, nutrition logging, progress tracking, and social features. Integrates with wearable devices and health APIs.",
+      "technologies": ["Flutter", "Dart", "Firebase", "HealthKit", "Google Fit"],
+      "category": "mobile",
+      "images": [
+        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+        "https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400"
+      ],
+      "githubUrl": "https://github.com/johndoe/fitness-tracker",
+      "liveUrl": "https://fitnesstracker.app"
+    }
+  ],
+  "contact": {
+    "email": "john.doe@example.com",
+    "phone": "+1 (555) 123-4567",
+    "location": "San Francisco, CA"
+  },
+  "social": {
+    "githubUrl": "https://github.com/johndoe",
+    "linkedinUrl": "https://linkedin.com/in/johndoe",
+    "twitterUrl": "https://twitter.com/johndoe"
+  },
+  "resumeUrl": "/resume.pdf"
+}

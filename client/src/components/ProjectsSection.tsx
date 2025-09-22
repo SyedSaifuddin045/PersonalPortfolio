@@ -7,8 +7,9 @@ interface Project {
   title: string;
   description: string;
   technologies: string[];
-  category: "web" | "mobile" | "api" | "all";
-  images: string[];
+  category: "web" | "mobile" | "api" | "game" | "graphics" | "system" | "devops" | "vr" | "all";
+  image_folder: string;
+  images?: string[];
   videos?: string[];
   githubUrl?: string;
   liveUrl?: string;
@@ -25,11 +26,8 @@ const defaultProjects: Project[] = [
     description: "A full-stack e-commerce solution with React, Node.js, and PostgreSQL. Features include user authentication, payment processing, and admin dashboard.",
     technologies: ["React", "Node.js", "PostgreSQL"],
     category: "web",
-    images: [
-      "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
-      "https://images.unsplash.com/photo-1556742111-a301076d9d18?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
-    ],
+    image_folder: "ecommerce",
+    images: ["ecommerce1.png"],
     githubUrl: "#",
     liveUrl: "#",
   },
@@ -39,10 +37,8 @@ const defaultProjects: Project[] = [
     description: "Cross-platform mobile app built with React Native. Features task scheduling, team collaboration, and offline synchronization.",
     technologies: ["React Native", "Redux", "Firebase"],
     category: "mobile",
-    images: [
-      "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
-      "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
-    ],
+    image_folder: "task-manager",
+    images: ["screen1.png", "screen2.png"],
     githubUrl: "#",
     liveUrl: "#",
   },
@@ -52,10 +48,11 @@ const defaultProjects: Project[] = [
     description: "Scalable REST API with comprehensive documentation, rate limiting, and monitoring. Built with Express.js and deployed on AWS.",
     technologies: ["Express.js", "MongoDB", "AWS"],
     category: "api",
+    image_folder: "api-service",
     images: [
-      "https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
-      "https://images.unsplash.com/photo-1627398242454-45a1465c2479?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
-      "https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+      "api-diagram.png",
+      "dashboard.png",
+      "metrics.png"
     ],
     githubUrl: "#",
     liveUrl: "#",
@@ -67,6 +64,11 @@ const filters = [
   { key: "web", label: "Web Apps" },
   { key: "mobile", label: "Mobile" },
   { key: "api", label: "APIs" },
+  { key: "game", label: "Games" },
+  { key: "graphics", label: "Graphics" },
+  { key: "system", label: "System" },
+  { key: "devops", label: "DevOps" },
+  { key: "vr", label: "VR" },
 ];
 
 function TechTag({ tech }: { tech: string }) {
@@ -92,6 +94,7 @@ function ProjectCard({ project }: { project: Project }) {
         images={project.images}
         videos={project.videos}
         title={project.title}
+        imageFolder={project.image_folder}
       />
 
       <div className="p-6">
@@ -138,6 +141,9 @@ function ProjectCard({ project }: { project: Project }) {
 export default function ProjectsSection({ projects = defaultProjects }: ProjectsSectionProps) {
   const [activeFilter, setActiveFilter] = useState("all");
   const [visibleProjects, setVisibleProjects] = useState(6);
+  
+  // Debug log to check projects data
+  console.log("Projects data:", projects);
 
   const filteredProjects = projects.filter(
     (project) => activeFilter === "all" || project.category === activeFilter
@@ -163,7 +169,7 @@ export default function ProjectsSection({ projects = defaultProjects }: Projects
           </h2>
           <div className="w-20 h-1 gradient-bg mx-auto mb-8"></div>
           <p className="text-portfolio-text-secondary max-w-2xl mx-auto">
-            A selection of projects that showcase my skills in web development, design, and problem-solving.
+            A selection of projects that showcase my skills.
           </p>
         </div>
 

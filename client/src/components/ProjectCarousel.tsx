@@ -2,15 +2,24 @@ import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface ProjectCarouselProps {
-  images: string[];
+  images?: string[];
   videos?: string[];
   title: string;
+  imageFolder: string;
 }
 
-export default function ProjectCarousel({ images, videos = [], title }: ProjectCarouselProps) {
+export default function ProjectCarousel({ images = [], videos = [], title, imageFolder }: ProjectCarouselProps) {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const allMedia = [...images, ...videos];
+  
+  const imageUrls = images.map(img => `/project_assets/${imageFolder}/${img}`);
+  const allMedia = [...imageUrls, ...videos];
+  
   const totalSlides = allMedia.length;
+
+  // Reset current slide when media changes
+  useEffect(() => {
+    setCurrentSlide(0);
+  }, [imageFolder]);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % totalSlides);
@@ -22,8 +31,10 @@ export default function ProjectCarousel({ images, videos = [], title }: ProjectC
 
   // Auto-play functionality
   useEffect(() => {
-    const interval = setInterval(nextSlide, 5000);
-    return () => clearInterval(interval);
+    if (totalSlides > 1) {
+      const interval = setInterval(nextSlide, 5000);
+      return () => clearInterval(interval);
+    }
   }, [totalSlides]);
 
   // Touch/swipe support
@@ -70,7 +81,11 @@ export default function ProjectCarousel({ images, videos = [], title }: ProjectC
           className="flex transition-transform duration-500"
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}
         >
-          {allMedia.map((media, index) => {
+          {allMedia.length === 0 ? (
+            <div className="w-full h-48 bg-portfolio-bg-secondary flex items-center justify-center text-portfolio-text-muted">
+              No images available
+            </div>
+          ) : allMedia.map((media, index) => {
             const isVideo = videos.includes(media);
             return (
               <div key={index} className="w-full flex-none">
@@ -83,10 +98,15 @@ export default function ProjectCarousel({ images, videos = [], title }: ProjectC
                   />
                 ) : (
                   <img
+                    key={media}
                     src={media}
                     alt={`${title} screenshot ${index + 1}`}
                     className="w-full h-48 object-cover"
                     data-testid={`carousel-image-${index}`}
+                    onError={(e) => {
+                      console.error(`Failed to load image: ${media}`);
+                      e.currentTarget.src = 'https://placehold.co/600x400?text=Image+Not+Found';
+                    }}
                   />
                 )}
               </div>

@@ -1,133 +1,256 @@
 {
-  "name": "John Doe",
+  "name": "Syed Saifuddin",
   "hero": {
-    "greeting": "Hi, I'm John",
-    "title": "Full Stack Developer & UI/UX Enthusiast",
-    "description": "I craft beautiful, functional web experiences with modern technologies. Passionate about clean code, user experience, and innovative solutions."
+    "greeting": "Hi, I'm Saif",
+    "title": "Software Developer and Computer Enthusiast",
+    "description": "I build immersive digital experiences across games, 3D visualization, and web applications. With expertise in Unity, full-stack development, DevOps, and cloud solutions, I bridge creativity and engineering to deliver scalable, cross-platform systems. Passionate about clean design, efficient workflows, and pushing the boundaries of technology."
   },
   "about": {
-    "description": "With over 5 years of experience in software development, I specialize in creating robust, scalable web applications. My passion lies in transforming complex problems into elegant, user-friendly solutions. I enjoy working with cutting-edge technologies and collaborating with teams to deliver exceptional digital experiences."
+    "description": "With a strong background in Unity, 3D visualization, full-stack development, DevOps, and cloud solutions, I specialize in building products that blend innovation with practicality. My passion lies in turning ideas into polished, scalable solutions that deliver real value. From crafting immersive experiences to engineering robust cross-platform applications, I thrive on creating products that leave a lasting impact."
   },
   "stats": [
-    {"value": "50+", "label": "Projects Completed"},
-    {"value": "5+", "label": "Years Experience"},
-    {"value": "20+", "label": "Happy Clients"},
-    {"value": "100%", "label": "Client Satisfaction"}
+    {
+      "value": "30+",
+      "label": "Projects Completed"
+    },
+    {
+      "value": "2+",
+      "label": "Years Experience"
+    },
+    {
+      "value": "10+",
+      "label": "Happy Clients"
+    },
+    {
+      "value": "100%",
+      "label": "Client Satisfaction"
+    }
   ],
   "skills": {
     "frontend": [
-      {"name": "React.js", "level": 5},
-      {"name": "TypeScript", "level": 5},
-      {"name": "Next.js", "level": 4},
-      {"name": "Tailwind CSS", "level": 5},
-      {"name": "Vue.js", "level": 3}
+      { "name": "Unity", "level": 5 },
+      { "name": "Next.js", "level": 5 },
+      { "name": "Tailwind CSS", "level": 5 },
+      { "name": "TypeScript", "level": 4 },
+      { "name": "JavaScript", "level": 4 },
+      { "name": "Qt", "level": 2 }
     ],
     "backend": [
-      {"name": "Node.js", "level": 5},
-      {"name": "Python", "level": 4},
-      {"name": "PostgreSQL", "level": 4},
-      {"name": "MongoDB", "level": 4},
-      {"name": "Express.js", "level": 5}
+      { "name": "Node.js", "level": 4 },
+      { "name": "JAVA", "level": 4 },
+      { "name": "Python", "level": 4 },
+      { "name": "SQL", "level": 4 },
+      { "name": "MongoDB", "level": 3.5 },
+      { "name": "Express.js", "level": 5 }
     ],
     "tools": [
-      {"name": "Docker", "level": 4},
-      {"name": "AWS", "level": 4},
-      {"name": "Git", "level": 5},
-      {"name": "Figma", "level": 4},
-      {"name": "Vercel", "level": 5}
+      { "name": "Docker", "level": 5 },
+      { "name": "AWS", "level": 5 },
+      { "name": "Git", "level": 5 }
     ]
   },
   "projects": [
     {
-      "id": "ecommerce-platform",
+      "id": "ecommerce",
       "title": "E-Commerce Platform",
       "description": "A full-stack e-commerce solution with React, Node.js, and PostgreSQL. Features include user authentication, payment processing with Stripe, admin dashboard, real-time inventory management, and advanced analytics.",
       "technologies": ["React", "Node.js", "PostgreSQL", "Stripe", "Redis"],
+      "image_folder": "ecommerce",
+      "images": ["ecommerce1.png"],
       "category": "web",
-      "images": [
-        "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
-        "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
-        "https://images.unsplash.com/photo-1556742111-a301076d9d18?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400"
-      ],
       "githubUrl": "https://github.com/johndoe/ecommerce-platform",
       "liveUrl": "https://ecommerce-demo.vercel.app"
     },
     {
-      "id": "task-manager-app",
-      "title": "Task Manager App",
-      "description": "Cross-platform mobile app built with React Native. Features task scheduling, team collaboration, offline synchronization, push notifications, and project timeline visualization.",
-      "technologies": ["React Native", "Redux", "Firebase", "AsyncStorage"],
+      "id": "housepaint",
+      "title": "House Paint Game",
+      "description": "A mobile game focused on painting a house with a sponge that can be controlled through swipes. Designed and created 100 levels with progressively challenging gameplay mechanics.",
+      "technologies": ["Unity", "C#", "Mobile"],
+      "image_folder": "housepaint",
+      "images": ["house1.png", "house2.png", "house3.png"],
       "category": "mobile",
-      "images": [
-        "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
-        "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400"
-      ],
-      "githubUrl": "https://github.com/johndoe/task-manager",
-      "liveUrl": "https://taskmanager-app.com"
+      "githubUrl": "https://github.com/SyedSaifuddin045/Housepaint2D",
+      "liveUrl": "https://play.google.com/store/apps/details?id=com.housepaint.game&hl=en_IN&pli=1"
     },
     {
-      "id": "api-service",
-      "title": "RESTful API Service",
-      "description": "Scalable REST API with comprehensive documentation, rate limiting, monitoring, caching, and microservices architecture. Built with Express.js and deployed on AWS with Docker containers.",
-      "technologies": ["Express.js", "MongoDB", "AWS", "Docker", "Redis"],
-      "category": "api",
-      "images": [
-        "https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
-        "https://images.unsplash.com/photo-1627398242454-45a1465c2479?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
-        "https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400"
-      ],
-      "githubUrl": "https://github.com/johndoe/api-service",
-      "liveUrl": "https://api.johndoe.dev"
-    },
-    {
-      "id": "portfolio-dashboard",
-      "title": "Analytics Dashboard",
-      "description": "Real-time analytics dashboard with interactive charts, data visualization, and custom reporting. Built with React, D3.js, and WebSocket connections for live data updates.",
-      "technologies": ["React", "D3.js", "WebSocket", "Chart.js", "Node.js"],
+      "id": "cryptoride",
+      "title": "Crypto Ride",
+      "description": "A Web3 based cab booking system developed on ETH blockchain transactions. Features decentralized payments, smart contracts for ride booking, and integration with Mapbox for navigation.",
+      "technologies": ["Next.js", "Ethereum", "Mapbox", "Web3"],
+      "image_folder": "cryptoride",
+      "images": ["Gemini_Generated_Image_rkgtl3rkgtl3rkgt.png"],
       "category": "web",
-      "images": [
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400"
-      ],
-      "githubUrl": "https://github.com/johndoe/analytics-dashboard",
-      "liveUrl": "https://dashboard.johndoe.dev"
+      "githubUrl": "https://github.com/SyedSaifuddin045/Crypto-ride-college-project-.git",
+      "liveUrl": "https://crypto-ride-college-project.vercel.app/"
     },
     {
-      "id": "social-media-app",
-      "title": "Social Media Platform",
-      "description": "Full-featured social media application with real-time messaging, content sharing, user profiles, and advanced privacy controls. Built with modern web technologies.",
-      "technologies": ["Next.js", "Socket.io", "Prisma", "PostgreSQL", "Cloudinary"],
+      "id": "eldencling",
+      "title": "Elden CLIng",
+      "description": "A terminal/CLI game with random arena generation and turn-based combat system. Features ASCII art, character progression, and procedurally generated dungeons.",
+      "technologies": ["C++", "NCurses", "CLI"],
+      "image_folder": "eldencling",
+      "images": ["Gemini_Generated_Image_6yyy936yyy936yyy.png", "Gemini_Generated_Image_nt6popnt6popnt6p.png", "Gemini_Generated_Image_yfxe05yfxe05yfxe.png"],
+      "category": "game",
+      "githubUrl": "https://github.com/johndoe/elden-cling"
+    },
+    {
+      "id": "openglrenderer",
+      "title": "OpenGL 3D Renderer",
+      "description": "A real-time 3D renderer built with C++ and OpenGL. Key features include a programmable graphics pipeline, support for complex 3D models, Phong lighting with multiple light sources, and texture mapping.",
+      "technologies": ["C++", "OpenGL", "GLFW", "GLSL"],
+      "image_folder": "openglrenderer",
+      "images": ["Gemini_Generated_Image_az7z6zaz7z6zaz7z.png", "Gemini_Generated_Image_fpv04nfpv04nfpv0.png"],
+      "category": "graphics",
+      "githubUrl": "https://github.com/johndoe/opengl-renderer"
+    },
+    {
+      "id": "chessbot",
+      "title": "Chess Bot",
+      "description": "A fully functional chess game with an integrated AI opponent. The AI is built using the Minimax algorithm with Alpha-Beta Pruning for efficient decision-making. Developed within a constraint of under 1000 lines of C# code.",
+      "technologies": ["Unity", "C#", "AI", "Minimax"],
+      "image_folder": "chessbot",
+      "images": ["Gemini_Generated_Image_tjbiaytjbiaytjbi.png"],
+      "category": "game",
+      "githubUrl": "https://github.com/johndoe/chess-bot-challenge",
+      "liveUrl": "https://itch.io/johndoe/chess-bot-challenge"
+    },
+    {
+      "id": "chess",
+      "title": "Multiplayer Chess (C++ & SFML)",
+      "description": "A cross-platform multiplayer chess game built from scratch using C++ and SFML. Features real-time gameplay over TCP sockets, custom networking layer, and full chess rule implementation.",
+      "technologies": ["C++", "SFML", "TCP Sockets", "Networking"],
+      "image_folder": "chess",
+      "images": ["Gemini_Generated_Image_59cndz59cndz59cn.png"],
+      "category": "game",
+      "githubUrl": "https://github.com/SyedSaifuddin045/sfml-multiplayer-chess"
+    },
+    {
+      "id": "audiovisualizer",
+      "title": "Audio Visualizer",
+      "description": "A lightweight real-time audio visualizer written in C using Kiss FFT for frequency domain analysis. Processes live audio input and generates dynamic visual patterns that react to music.",
+      "technologies": ["C", "Kiss FFT", "Signal Processing", "Audio"],
+      "image_folder": "audiovisualizer",
+      "images": ["Gemini_Generated_Image_4y4jxq4y4jxq4y4j.png", "Gemini_Generated_Image_l9qj0xl9qj0xl9qj.png"],
+      "category": "graphics",
+      "githubUrl": "https://github.com/SyedSaifuddin045/AudioVisualizer"
+    },
+    {
+      "id": "prorecommend",
+      "title": "Product Recommendation Website",
+      "description": "A web application that scrapes Amazon product pages to analyze reviews and ratings, recommending the best products to users. Integrates web scraping, sentiment analysis, and recommendation algorithms.",
+      "technologies": ["Python", "BeautifulSoup", "Flask", "Pandas", "ML"],
+      "image_folder": "prorecommend",
+      "images": ["Gemini_Generated_Image_72vlyk72vlyk72vl.png", "Gemini_Generated_Image_ibhnc5ibhnc5ibhn.png"],
       "category": "web",
-      "images": [
-        "https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
-        "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400"
-      ],
-      "githubUrl": "https://github.com/johndoe/social-platform",
-      "liveUrl": "https://social.johndoe.dev"
+      "githubUrl": "https://github.com/SyedSaifuddin045/product-recommendation"
     },
     {
-      "id": "fitness-tracker",
-      "title": "Fitness Tracker Mobile App",
-      "description": "Comprehensive fitness tracking app with workout plans, nutrition logging, progress tracking, and social features. Integrates with wearable devices and health APIs.",
-      "technologies": ["Flutter", "Dart", "Firebase", "HealthKit", "Google Fit"],
-      "category": "mobile",
-      "images": [
-        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
-        "https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400"
-      ],
-      "githubUrl": "https://github.com/johndoe/fitness-tracker",
-      "liveUrl": "https://fitnesstracker.app"
+      "id": "spolist",
+      "title": "Spolist - 3D Music Player",
+      "description": "A music player web application that integrates Spotify playlists with 3D visualizations using Three.js. Frontend built with React.js, backend in Go, fetching songs via YouTube-DLL.",
+      "technologies": ["React.js", "Three.js", "Go", "Spotify API", "YouTube-DLL"],
+      "image_folder": "spolist",
+      "images": ["Gemini_Generated_Image_5sud0r5sud0r5sud.png", "Gemini_Generated_Image_5zp3s45zp3s45zp3.png"],
+      "category": "web",
+      "githubUrl": "https://github.com/SyedSaifuddin045/spolist"
+    },
+    {
+      "id": "mosaicgame",
+      "title": "Mosaic Puzzle Game",
+      "description": "A kid-friendly puzzle game developed in Unity where players match and place blocks according to given shapes. Designed to enhance pattern recognition and problem-solving skills.",
+      "technologies": ["Unity", "C#", "2D Games", "Educational"],
+      "image_folder": "mosaicgame",
+      "images": ["Gemini_Generated_Image_3pxn3t3pxn3t3pxn.png", "Gemini_Generated_Image_wnfefwnfefwnfefw.png"],
+      "category": "game",
+      "githubUrl": "https://github.com/SyedSaifuddin045/MosaicGame"
+    },
+    {
+      "id": "minifootballmultiplayer",
+      "title": "Unity Mini Football Lobby Multiplayer",
+      "description": "A multiplayer top-down football game built in Unity using Unity Relay, Lobby, and Netcode for GameObjects. Features lobby creation, matchmaking, and real-time multiplayer gameplay.",
+      "technologies": ["Unity", "C#", "Unity Relay", "Unity Lobby", "Netcode"],
+      "image_folder": "minifootballmultiplayer",
+      "images": ["Gemini_Generated_Image_2vc8n82vc8n82vc8.png", "Gemini_Generated_Image_ry29f3ry29f3ry29.png"],
+      "category": "game",
+      "githubUrl": "https://github.com/SyedSaifuddin045/Unity_Lobby_Multiplayer"
+    },
+    {
+      "id": "sqliteclone",
+      "title": "SQLite Clone",
+      "description": "A low-level implementation of a simple SQLite-like database engine written in C. Demonstrates understanding of file I/O, data storage structures, query parsing, and basic SQL operations.",
+      "technologies": ["C", "File I/O", "Data Structures", "SQL Parsing"],
+      "image_folder": "sqliteclone",
+      "images": ["Gemini_Generated_Image_n52k9yn52k9yn52k.png", "Gemini_Generated_Image_r00x0ar00x0ar00x.png"],
+      "category": "system",
+      "githubUrl": "https://github.com/SyedSaifuddin045/SQLite"
+    },
+    {
+      "id": "casino",
+      "title": "Betting Casino Multiplayer",
+      "description": "A high-scale multiplayer betting casino game supporting over 500 concurrent users. Built with Unity frontend and Node.js backend with WebSockets and Redis for real-time communication.",
+      "technologies": ["Unity", "C#", "Node.js", "WebSockets", "Redis"],
+      "image_folder": "casino",
+      "images": ["Gemini_Generated_Image_jiwfs4jiwfs4jiwf.png", "Gemini_Generated_Image_v3llncv3llncv3ll.png"],
+      "category": "game"
+    },
+    {
+      "id": "awsterraform",
+      "title": "AWS EC2 Terraform IAC Modules",
+      "description": "A collection of reusable Terraform modules for provisioning and managing AWS EC2 instances. Supports various configurations including single/multiple instances, spot instances, and VPC integration.",
+      "technologies": ["Terraform", "AWS EC2", "AWS IAM", "AWS VPC", "Infrastructure"],
+      "image_folder": "awsterraform",
+      "images": ["Gemini_Generated_Image_p79u85p79u85p79u.png", "Gemini_Generated_Image_r77f9lr77f9lr77f.png"],
+      "category": "devops",
+      "githubUrl": "https://github.com/SyedSaifuddin045/AWS_EC2_Terraform"
+    },
+    {
+      "id": "jenkins",
+      "title": "Jenkins CI/CD Pipeline with Secrets Management",
+      "description": "A Jenkins pipeline demonstrating CI/CD best practices with secure handling of secrets and credentials using Jenkins' Credentials Binding plugin for automated workflows.",
+      "technologies": ["Jenkins", "Groovy", "CI/CD", "DevOps", "Security"],
+      "image_folder": "jenkins",
+      "images": ["Gemini_Generated_Image_j29e7fj29e7fj29e.png", "Gemini_Generated_Image_pdlo65pdlo65pdlo.png"],
+      "category": "devops",
+      "githubUrl": "https://github.com/SyedSaifuddin045/jenkins-hello-world"
+    },
+    {
+      "id": "windowscontrollersocket",
+      "title": "Windows Controller Socket",
+      "description": "A C program that captures Xbox 360 controller input using XInput and transmits data over TCP socket using Winsock. Enables remote control applications and network-based gaming.",
+      "technologies": ["C", "Winsock", "XInput", "TCP/IP", "Networking"],
+      "image_folder": "windowscontrollersocket",
+      "images": ["Gemini_Generated_Image_v7wvzlv7wvzlv7wv.png"],
+      "category": "system",
+      "githubUrl": "https://github.com/SyedSaifuddin045/WindowsControllerSocket"
+    },
+    {
+      "id": "vrtraining",
+      "title": "VR Airplane Training Simulator",
+      "description": "An AR/VR training application built in Unity for airplane operations and safety training. Uses XR Interaction Toolkit with Meta Quest support for immersive cockpit simulations.",
+      "technologies": ["Unity", "C#", "XR Toolkit", "Meta Quest", "VR/AR"],
+      "image_folder": "vrtraining",
+      "images": ["Gemini_Generated_Image_r3xzaer3xzaer3xz.png"],
+      "category": "vr"
+    },
+    {
+      "id": "omniverseigloo",
+      "title": "Omniverse Igloo 360° Video Transmission",
+      "description": "A project utilizing NVIDIA Omniverse Igloo for real-time 360-degree video transmission. Integrates NDI and Sprout for streaming immersive content across multiple devices.",
+      "technologies": ["NVIDIA Omniverse", "NDI", "Sprout", "360° Video", "Streaming"],
+      "image_folder": "omniverseigloo",
+      "images": ["Gemini_Generated_Image_6em2wu6em2wu6em2.png", "Gemini_Generated_Image_mvyvwomvyvwomvyv.png"],
+      "category": "graphics"
     }
   ],
   "contact": {
-    "email": "john.doe@example.com",
-    "phone": "+1 (555) 123-4567",
-    "location": "San Francisco, CA"
+    "email": "syedsaifuddin.work@gmail.com",
+    "phone": "+91 6290858896",
+    "location": "Kolkata, West Bengal, India"
   },
   "social": {
-    "githubUrl": "https://github.com/johndoe",
-    "linkedinUrl": "https://linkedin.com/in/johndoe",
-    "twitterUrl": "https://twitter.com/johndoe"
+    "githubUrl": "https://github.com/SyedSaifuddin045",
+    "linkedinUrl": "https://www.linkedin.com/in/syed-saifuddin-5430a2204/",
+    "twitterUrl": "https://x.com/zerexius"
   },
   "resumeUrl": "/resume.pdf"
 }

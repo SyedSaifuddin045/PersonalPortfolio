@@ -69,6 +69,7 @@ export async function setupVite(app: Express, server: Server) {
 
 export function serveStatic(app: Express) {
   const distPath = path.resolve(import.meta.dirname, "public");
+  const projectAssetsPath = path.resolve(import.meta.dirname, "..", "project_assets");
 
   if (!fs.existsSync(distPath)) {
     throw new Error(
@@ -76,7 +77,20 @@ export function serveStatic(app: Express) {
     );
   }
 
+  log(`Project assets path: ${projectAssetsPath}`);
+  log(`Directory exists: ${fs.existsSync(projectAssetsPath)}`);
+  if (fs.existsSync(projectAssetsPath)) {
+    log(`Contents: ${fs.readdirSync(projectAssetsPath).join(", ")}`);
+  }
+
   app.use(express.static(distPath));
+  app.use("/project_assets", express.static(projectAssetsPath));
+  
+  // Add logging middleware for project_assets requests
+  app.use("/project_assets", (req, res, next) => {
+    log(`Accessing: ${req.url}`);
+    next();
+  });
 
   // fall through to index.html if the file doesn't exist
   app.use("*", (_req, res) => {

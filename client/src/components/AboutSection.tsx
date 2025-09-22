@@ -1,19 +1,25 @@
 import { Download } from "lucide-react";
 
 interface AboutSectionProps {
-  description?: string;
+  about: {
+    description?: string;
+    personalPic?: string;
+    resumeFile?: string;
+  };
   stats?: Array<{ value: string; label: string }>;
-  resumeUrl?: string;
 }
 
 export default function AboutSection({
-  description = "With years of experience in software development, I specialize in creating robust, scalable web applications. My passion lies in transforming complex problems into elegant, user-friendly solutions.",
+  about = {},
   stats = [
     { value: "50+", label: "Projects Completed" },
     { value: "5+", label: "Years Experience" },
   ],
-  resumeUrl,
 }: AboutSectionProps) {
+  const { description, personalPic, resumeFile } = about;
+  const resumeUrl = resumeFile ? `/personal_assets/${resumeFile}` : undefined;
+  const personalPicUrl = personalPic ? `/personal_assets/${personalPic}` : "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=800";
+
   return (
     <section id="about" className="py-20 px-6">
       <div className="max-w-6xl mx-auto">
@@ -28,7 +34,7 @@ export default function AboutSection({
           {/* Profile Image */}
           <div className="order-2 lg:order-1">
             <img
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=800"
+              src={personalPicUrl}
               alt="Professional developer portrait"
               className="rounded-2xl shadow-2xl w-full max-w-md mx-auto lg:mx-0 hover:scale-105 transition-transform duration-300"
               data-testid="profile-image"

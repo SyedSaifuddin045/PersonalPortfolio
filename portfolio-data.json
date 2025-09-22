@@ -6,7 +6,9 @@
     "description": "I build immersive digital experiences across games, 3D visualization, and web applications. With expertise in Unity, full-stack development, DevOps, and cloud solutions, I bridge creativity and engineering to deliver scalable, cross-platform systems. Passionate about clean design, efficient workflows, and pushing the boundaries of technology."
   },
   "about": {
-    "description": "With a strong background in Unity, 3D visualization, full-stack development, DevOps, and cloud solutions, I specialize in building products that blend innovation with practicality. My passion lies in turning ideas into polished, scalable solutions that deliver real value. From crafting immersive experiences to engineering robust cross-platform applications, I thrive on creating products that leave a lasting impact."
+    "description": "With a strong background in Unity, 3D visualization, full-stack development, DevOps, and cloud solutions, I specialize in building products that blend innovation with practicality. My passion lies in turning ideas into polished, scalable solutions that deliver real value. From crafting immersive experiences to engineering robust cross-platform applications, I thrive on creating products that leave a lasting impact.",
+    "personalPic": "profile.jpeg",
+    "resumeFile": "resume.pdf"
   },
   "stats": [
     {
@@ -251,6 +253,5 @@
     "githubUrl": "https://github.com/SyedSaifuddin045",
     "linkedinUrl": "https://www.linkedin.com/in/syed-saifuddin-5430a2204/",
     "twitterUrl": "https://x.com/zerexius"
-  },
-  "resumeUrl": "/resume.pdf"
+  }
 }

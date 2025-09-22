@@ -47,9 +47,8 @@ export default function Home() {
       />
       
       <AboutSection
-        description={portfolio.about.description}
+        about={portfolio.about}
         stats={portfolio.stats}
-        resumeUrl={portfolio.resumeUrl}
       />
       
       <SkillsSection skills={portfolio.skills} />

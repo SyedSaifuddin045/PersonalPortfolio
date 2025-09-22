@@ -70,6 +70,7 @@ export async function setupVite(app: Express, server: Server) {
 export function serveStatic(app: Express) {
   const distPath = path.resolve(import.meta.dirname, "public");
   const projectAssetsPath = path.resolve(import.meta.dirname, "..", "project_assets");
+  const personalAssetsPath = path.resolve(import.meta.dirname, "..", "personal_assets");
 
   if (!fs.existsSync(distPath)) {
     throw new Error(
@@ -85,6 +86,7 @@ export function serveStatic(app: Express) {
 
   app.use(express.static(distPath));
   app.use("/project_assets", express.static(projectAssetsPath));
+  app.use("/personal_assets", express.static(personalAssetsPath));
   
   // Add logging middleware for project_assets requests
   app.use("/project_assets", (req, res, next) => {

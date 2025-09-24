@@ -33,8 +33,8 @@ WORKDIR /app
 COPY --from=builder --chown=nextjs:nodejs /app/dist ./dist
 COPY --from=builder --chown=nextjs:nodejs /app/package*.json ./
 
-# Install only production dependencies
-RUN npm ci --only=production && npm cache clean --force
+# Install dependencies
+RUN npm ci && npm cache clean --force
 
 # Switch to non-root user
 USER nextjs

@@ -34,6 +34,8 @@ COPY --from=builder --chown=nextjs:nodejs /app/dist ./dist
 COPY --from=builder --chown=nextjs:nodejs /app/package*.json ./
 COPY --from=builder --chown=nextjs:nodejs /app/.env ./
 COPY --from=builder --chown=nextjs:nodejs /app/portfolio-data.json ./
+COPY --from=builder --chown=nextjs:nodejs /app/personal_assets ./
+COPY --from=builder --chown=nextjs:nodejs /app/project_assets ./
 
 # Install dependencies
 RUN npm ci && npm cache clean --force

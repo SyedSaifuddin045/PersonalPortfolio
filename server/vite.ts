@@ -20,6 +20,19 @@ export function log(message: string, source = "express") {
 }
 
 export async function setupVite(app: Express, server: Server) {
+  const projectAssetsPath = path.resolve(import.meta.dirname, "..", "project_assets");
+  const personalAssetsPath = path.resolve(import.meta.dirname, "..", "personal_assets");
+  
+  log(`Project assets path: ${projectAssetsPath}`);
+  log(`Directory exists: ${fs.existsSync(projectAssetsPath)}`);
+  if (fs.existsSync(projectAssetsPath)) {
+    log(`Contents: ${fs.readdirSync(projectAssetsPath).join(", ")}`);
+  }
+  
+  // Serve static assets BEFORE vite middleware
+  app.use("/project_assets", express.static(projectAssetsPath));
+  app.use("/personal_assets", express.static(personalAssetsPath));
+  
   const serverOptions = {
     middlewareMode: true,
     hmr: { server },
@@ -69,6 +82,7 @@ export async function setupVite(app: Express, server: Server) {
 
 export function serveStatic(app: Express) {
   const distPath = path.resolve(import.meta.dirname, "public");
+  const optimizedAssetsPath = path.resolve(import.meta.dirname, "public", "project_assets");
   const projectAssetsPath = path.resolve(import.meta.dirname, "..", "project_assets");
   const personalAssetsPath = path.resolve(import.meta.dirname, "..", "personal_assets");
 
@@ -85,7 +99,14 @@ export function serveStatic(app: Express) {
   }
 
   app.use(express.static(distPath));
-  app.use("/project_assets", express.static(projectAssetsPath));
+  // Serve optimized assets if they exist, otherwise fall back to source assets
+  if (fs.existsSync(optimizedAssetsPath)) {
+    log(`Serving optimized assets from: ${optimizedAssetsPath}`);
+    app.use("/project_assets", express.static(optimizedAssetsPath));
+  } else {
+    log(`Serving source assets from: ${projectAssetsPath}`);
+    app.use("/project_assets", express.static(projectAssetsPath));
+  }
   app.use("/personal_assets", express.static(personalAssetsPath));
   
   // Add logging middleware for project_assets requests

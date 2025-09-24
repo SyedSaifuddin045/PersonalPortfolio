@@ -22,9 +22,9 @@ interface ContactSectionProps {
 }
 
 const defaultContact: ContactInfo = {
-  email: "developer@example.com",
-  phone: "+1 (555) 123-4567",
-  location: "San Francisco, CA",
+  email: "syedsaifuddin.work@gmail.com",
+  phone: "+91 6290858896",
+  location: "Kolkata, West Bengal, India",
 };
 
 const defaultSocial: SocialLinks = {
@@ -43,6 +43,7 @@ export default function ContactSection({
     email: "",
     subject: "",
     message: "",
+    emailTo: contact.email
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
@@ -71,6 +72,7 @@ export default function ContactSection({
         email: "",
         subject: "",
         message: "",
+        emailTo: contact.email
       });
     } catch (error) {
       toast({

@@ -99,6 +99,10 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        float: "float 3s ease-in-out infinite",
+        "fade-in": "fade-in 1s ease-in",
+        glow: "glow 2s ease-in-out infinite",
+        "spin-slow": "spin 8s linear infinite",
       },
     },
   },

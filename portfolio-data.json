@@ -7,7 +7,7 @@
   },
   "about": {
     "description": "With a strong background in Unity, 3D visualization, full-stack development, DevOps, and cloud solutions, I specialize in building products that blend innovation with practicality. My passion lies in turning ideas into polished, scalable solutions that deliver real value. From crafting immersive experiences to engineering robust cross-platform applications, I thrive on creating products that leave a lasting impact.",
-    "personalPic": "profile.jpeg",
+    "personalPic": "Profile.jpg",
     "resumeFile": "resume.pdf"
   },
   "stats": [
@@ -58,7 +58,6 @@
       "description": "A full-stack e-commerce solution with React, Node.js, and PostgreSQL. Features include user authentication, payment processing with Stripe, admin dashboard, real-time inventory management, and advanced analytics.",
       "technologies": ["React", "Node.js", "PostgreSQL", "Stripe", "Redis"],
       "image_folder": "ecommerce",
-      "images": ["ecommerce1.png"],
       "category": "web",
       "githubUrl": "https://github.com/johndoe/ecommerce-platform",
       "liveUrl": "https://ecommerce-demo.vercel.app"
@@ -69,7 +68,6 @@
       "description": "A mobile game focused on painting a house with a sponge that can be controlled through swipes. Designed and created 100 levels with progressively challenging gameplay mechanics.",
       "technologies": ["Unity", "C#", "Mobile"],
       "image_folder": "housepaint",
-      "images": ["house1.png", "house2.png", "house3.png"],
       "category": "mobile",
       "githubUrl": "https://github.com/SyedSaifuddin045/Housepaint2D",
       "liveUrl": "https://play.google.com/store/apps/details?id=com.housepaint.game&hl=en_IN&pli=1"
@@ -80,7 +78,6 @@
       "description": "A Web3 based cab booking system developed on ETH blockchain transactions. Features decentralized payments, smart contracts for ride booking, and integration with Mapbox for navigation.",
       "technologies": ["Next.js", "Ethereum", "Mapbox", "Web3"],
       "image_folder": "cryptoride",
-      "images": ["Gemini_Generated_Image_rkgtl3rkgtl3rkgt.png"],
       "category": "web",
       "githubUrl": "https://github.com/SyedSaifuddin045/Crypto-ride-college-project-.git",
       "liveUrl": "https://crypto-ride-college-project.vercel.app/"
@@ -91,7 +88,6 @@
       "description": "A terminal/CLI game with random arena generation and turn-based combat system. Features ASCII art, character progression, and procedurally generated dungeons.",
       "technologies": ["C++", "NCurses", "CLI"],
       "image_folder": "eldencling",
-      "images": ["Gemini_Generated_Image_6yyy936yyy936yyy.png", "Gemini_Generated_Image_nt6popnt6popnt6p.png", "Gemini_Generated_Image_yfxe05yfxe05yfxe.png"],
       "category": "game",
       "githubUrl": "https://github.com/johndoe/elden-cling"
     },
@@ -101,7 +97,6 @@
       "description": "A real-time 3D renderer built with C++ and OpenGL. Key features include a programmable graphics pipeline, support for complex 3D models, Phong lighting with multiple light sources, and texture mapping.",
       "technologies": ["C++", "OpenGL", "GLFW", "GLSL"],
       "image_folder": "openglrenderer",
-      "images": ["Gemini_Generated_Image_az7z6zaz7z6zaz7z.png", "Gemini_Generated_Image_fpv04nfpv04nfpv0.png"],
       "category": "graphics",
       "githubUrl": "https://github.com/johndoe/opengl-renderer"
     },
@@ -111,7 +106,6 @@
       "description": "A fully functional chess game with an integrated AI opponent. The AI is built using the Minimax algorithm with Alpha-Beta Pruning for efficient decision-making. Developed within a constraint of under 1000 lines of C# code.",
       "technologies": ["Unity", "C#", "AI", "Minimax"],
       "image_folder": "chessbot",
-      "images": ["Gemini_Generated_Image_tjbiaytjbiaytjbi.png"],
       "category": "game",
       "githubUrl": "https://github.com/johndoe/chess-bot-challenge",
       "liveUrl": "https://itch.io/johndoe/chess-bot-challenge"
@@ -122,7 +116,6 @@
       "description": "A cross-platform multiplayer chess game built from scratch using C++ and SFML. Features real-time gameplay over TCP sockets, custom networking layer, and full chess rule implementation.",
       "technologies": ["C++", "SFML", "TCP Sockets", "Networking"],
       "image_folder": "chess",
-      "images": ["Gemini_Generated_Image_59cndz59cndz59cn.png"],
       "category": "game",
       "githubUrl": "https://github.com/SyedSaifuddin045/sfml-multiplayer-chess"
     },
@@ -132,7 +125,6 @@
       "description": "A lightweight real-time audio visualizer written in C using Kiss FFT for frequency domain analysis. Processes live audio input and generates dynamic visual patterns that react to music.",
       "technologies": ["C", "Kiss FFT", "Signal Processing", "Audio"],
       "image_folder": "audiovisualizer",
-      "images": ["Gemini_Generated_Image_4y4jxq4y4jxq4y4j.png", "Gemini_Generated_Image_l9qj0xl9qj0xl9qj.png"],
       "category": "graphics",
       "githubUrl": "https://github.com/SyedSaifuddin045/AudioVisualizer"
     },
@@ -142,7 +134,6 @@
       "description": "A web application that scrapes Amazon product pages to analyze reviews and ratings, recommending the best products to users. Integrates web scraping, sentiment analysis, and recommendation algorithms.",
       "technologies": ["Python", "BeautifulSoup", "Flask", "Pandas", "ML"],
       "image_folder": "prorecommend",
-      "images": ["Gemini_Generated_Image_72vlyk72vlyk72vl.png", "Gemini_Generated_Image_ibhnc5ibhnc5ibhn.png"],
       "category": "web",
       "githubUrl": "https://github.com/SyedSaifuddin045/product-recommendation"
     },
@@ -152,7 +143,6 @@
       "description": "A music player web application that integrates Spotify playlists with 3D visualizations using Three.js. Frontend built with React.js, backend in Go, fetching songs via YouTube-DLL.",
       "technologies": ["React.js", "Three.js", "Go", "Spotify API", "YouTube-DLL"],
       "image_folder": "spolist",
-      "images": ["Gemini_Generated_Image_5sud0r5sud0r5sud.png", "Gemini_Generated_Image_5zp3s45zp3s45zp3.png"],
       "category": "web",
       "githubUrl": "https://github.com/SyedSaifuddin045/spolist"
     },
@@ -162,7 +152,6 @@
       "description": "A kid-friendly puzzle game developed in Unity where players match and place blocks according to given shapes. Designed to enhance pattern recognition and problem-solving skills.",
       "technologies": ["Unity", "C#", "2D Games", "Educational"],
       "image_folder": "mosaicgame",
-      "images": ["Gemini_Generated_Image_3pxn3t3pxn3t3pxn.png", "Gemini_Generated_Image_wnfefwnfefwnfefw.png"],
       "category": "game",
       "githubUrl": "https://github.com/SyedSaifuddin045/MosaicGame"
     },
@@ -172,7 +161,6 @@
       "description": "A multiplayer top-down football game built in Unity using Unity Relay, Lobby, and Netcode for GameObjects. Features lobby creation, matchmaking, and real-time multiplayer gameplay.",
       "technologies": ["Unity", "C#", "Unity Relay", "Unity Lobby", "Netcode"],
       "image_folder": "minifootballmultiplayer",
-      "images": ["Gemini_Generated_Image_2vc8n82vc8n82vc8.png", "Gemini_Generated_Image_ry29f3ry29f3ry29.png"],
       "category": "game",
       "githubUrl": "https://github.com/SyedSaifuddin045/Unity_Lobby_Multiplayer"
     },
@@ -182,7 +170,6 @@
       "description": "A low-level implementation of a simple SQLite-like database engine written in C. Demonstrates understanding of file I/O, data storage structures, query parsing, and basic SQL operations.",
       "technologies": ["C", "File I/O", "Data Structures", "SQL Parsing"],
       "image_folder": "sqliteclone",
-      "images": ["Gemini_Generated_Image_n52k9yn52k9yn52k.png", "Gemini_Generated_Image_r00x0ar00x0ar00x.png"],
       "category": "system",
       "githubUrl": "https://github.com/SyedSaifuddin045/SQLite"
     },
@@ -192,7 +179,6 @@
       "description": "A high-scale multiplayer betting casino game supporting over 500 concurrent users. Built with Unity frontend and Node.js backend with WebSockets and Redis for real-time communication.",
       "technologies": ["Unity", "C#", "Node.js", "WebSockets", "Redis"],
       "image_folder": "casino",
-      "images": ["Gemini_Generated_Image_jiwfs4jiwfs4jiwf.png", "Gemini_Generated_Image_v3llncv3llncv3ll.png"],
       "category": "game"
     },
     {
@@ -201,7 +187,6 @@
       "description": "A collection of reusable Terraform modules for provisioning and managing AWS EC2 instances. Supports various configurations including single/multiple instances, spot instances, and VPC integration.",
       "technologies": ["Terraform", "AWS EC2", "AWS IAM", "AWS VPC", "Infrastructure"],
       "image_folder": "awsterraform",
-      "images": ["Gemini_Generated_Image_p79u85p79u85p79u.png", "Gemini_Generated_Image_r77f9lr77f9lr77f.png"],
       "category": "devops",
       "githubUrl": "https://github.com/SyedSaifuddin045/AWS_EC2_Terraform"
     },
@@ -211,7 +196,6 @@
       "description": "A Jenkins pipeline demonstrating CI/CD best practices with secure handling of secrets and credentials using Jenkins' Credentials Binding plugin for automated workflows.",
       "technologies": ["Jenkins", "Groovy", "CI/CD", "DevOps", "Security"],
       "image_folder": "jenkins",
-      "images": ["Gemini_Generated_Image_j29e7fj29e7fj29e.png", "Gemini_Generated_Image_pdlo65pdlo65pdlo.png"],
       "category": "devops",
       "githubUrl": "https://github.com/SyedSaifuddin045/jenkins-hello-world"
     },
@@ -221,7 +205,6 @@
       "description": "A C program that captures Xbox 360 controller input using XInput and transmits data over TCP socket using Winsock. Enables remote control applications and network-based gaming.",
       "technologies": ["C", "Winsock", "XInput", "TCP/IP", "Networking"],
       "image_folder": "windowscontrollersocket",
-      "images": ["Gemini_Generated_Image_v7wvzlv7wvzlv7wv.png"],
       "category": "system",
       "githubUrl": "https://github.com/SyedSaifuddin045/WindowsControllerSocket"
     },
@@ -231,7 +214,6 @@
       "description": "An AR/VR training application built in Unity for airplane operations and safety training. Uses XR Interaction Toolkit with Meta Quest support for immersive cockpit simulations.",
       "technologies": ["Unity", "C#", "XR Toolkit", "Meta Quest", "VR/AR"],
       "image_folder": "vrtraining",
-      "images": ["Gemini_Generated_Image_r3xzaer3xzaer3xz.png"],
       "category": "vr"
     },
     {
@@ -240,7 +222,6 @@
       "description": "A project utilizing NVIDIA Omniverse Igloo for real-time 360-degree video transmission. Integrates NDI and Sprout for streaming immersive content across multiple devices.",
       "technologies": ["NVIDIA Omniverse", "NDI", "Sprout", "360° Video", "Streaming"],
       "image_folder": "omniverseigloo",
-      "images": ["Gemini_Generated_Image_6em2wu6em2wu6em2.png", "Gemini_Generated_Image_mvyvwomvyvwomvyv.png"],
       "category": "graphics"
     }
   ],

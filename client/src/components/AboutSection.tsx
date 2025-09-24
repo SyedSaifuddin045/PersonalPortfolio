@@ -33,12 +33,15 @@ export default function AboutSection({
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Profile Image */}
           <div className="order-2 lg:order-1">
-            <img
-              src={personalPicUrl}
-              alt="Professional developer portrait"
-              className="rounded-2xl shadow-2xl w-full max-w-md mx-auto lg:mx-0 hover:scale-105 transition-transform duration-300"
-              data-testid="profile-image"
-            />
+            <div className="relative mx-auto lg:mx-0 w-64 h-64 md:w-80 md:h-80">
+              <div className="absolute inset-0 bg-gradient-to-r from-portfolio-primary to-portfolio-accent rounded-full animate-spin-slow"></div>
+              <img
+                src={personalPicUrl}
+                alt="Professional developer portrait"
+                className="absolute inset-2 w-[calc(100%-16px)] h-[calc(100%-16px)] object-cover rounded-full border-4 border-portfolio-bg-primary shadow-xl hover:scale-105 transition-transform duration-300"
+                data-testid="profile-image"
+              />
+            </div>
           </div>
 
           {/* About Content */}

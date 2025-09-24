@@ -10,8 +10,43 @@ interface ProjectCarouselProps {
 
 export default function ProjectCarousel({ images = [], videos = [], title, imageFolder }: ProjectCarouselProps) {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [localImages, setLocalImages] = useState<string[]>(images);
+
+  // If images prop changes, sync into local state
+  useEffect(() => {
+    setLocalImages(images);
+  }, [images]);
+
+  // Fallback: auto-fetch images for this folder if none provided
+  useEffect(() => {
+    let cancelled = false;
+    async function fetchImages() {
+      try {
+        const res = await fetch(`/api/assets/${imageFolder}`);
+        if (!res.ok) return;
+        const data = await res.json();
+        // Support both shapes: { images: string[] } or { images: { filename: string }[] }
+        const fetched: string[] = Array.isArray(data?.images)
+          ? (typeof data.images[0] === 'string'
+              ? data.images as string[]
+              : (data.images as Array<{ filename?: string; path?: string }>)
+                  .map(i => i.filename || (i.path ? i.path.split('/').pop() : ''))
+                  .filter(Boolean) as string[])
+          : [];
+        if (!cancelled && fetched.length) {
+          setLocalImages(fetched);
+        }
+      } catch (e) {
+        // ignore
+      }
+    }
+    if (imageFolder && (!localImages || localImages.length === 0)) {
+      fetchImages();
+    }
+    return () => { cancelled = true; };
+  }, [imageFolder, localImages?.length]);
   
-  const imageUrls = images.map(img => `/project_assets/${imageFolder}/${img}`);
+  const imageUrls = (localImages || []).map(img => `/project_assets/${imageFolder}/${img}`);
   const allMedia = [...imageUrls, ...videos];
   
   const totalSlides = allMedia.length;
@@ -68,6 +103,8 @@ export default function ProjectCarousel({ images = [], videos = [], title, image
 
   if (totalSlides === 0) return null;
 
+  const translateXValue = `translateX(-${currentSlide * 100}%)`;
+
   return (
     <div 
       className="relative group"
@@ -79,39 +116,42 @@ export default function ProjectCarousel({ images = [], videos = [], title, image
       <div className="overflow-hidden rounded-t-2xl">
         <div 
           className="flex transition-transform duration-500"
-          style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+          style={{ transform: translateXValue }}
         >
           {allMedia.length === 0 ? (
             <div className="w-full h-48 bg-portfolio-bg-secondary flex items-center justify-center text-portfolio-text-muted">
               No images available
             </div>
-          ) : allMedia.map((media, index) => {
-            const isVideo = videos.includes(media);
-            return (
-              <div key={index} className="w-full flex-none">
-                {isVideo ? (
-                  <video
-                    src={media}
-                    className="w-full h-48 object-cover"
-                    controls
-                    data-testid={`carousel-video-${index}`}
-                  />
-                ) : (
-                  <img
-                    key={media}
-                    src={media}
-                    alt={`${title} screenshot ${index + 1}`}
-                    className="w-full h-48 object-cover"
-                    data-testid={`carousel-image-${index}`}
-                    onError={(e) => {
-                      console.error(`Failed to load image: ${media}`);
-                      e.currentTarget.src = 'https://placehold.co/600x400?text=Image+Not+Found';
-                    }}
-                  />
-                )}
-              </div>
-            );
-          })}
+          ) : (
+            allMedia.map((media, index) => {
+              const isVideo = videos.includes(media);
+              return (
+                <div key={index} className="w-full flex-none">
+                  {isVideo ? (
+                    <video
+                      src={media}
+                      className="w-full h-48 object-cover"
+                      controls
+                      data-testid={`carousel-video-${index}`}
+                    />
+                  ) : (
+                    <img
+                      key={media}
+                      src={media}
+                      alt={`${title} screenshot ${index + 1}`}
+                      className="w-full h-48 object-cover"
+                      data-testid={`carousel-image-${index}`}
+                      loading="lazy"
+                      onError={(e) => {
+                        console.error(`Failed to load image: ${media}`);
+                        e.currentTarget.src = 'https://placehold.co/600x400?text=Image+Not+Found';
+                      }}
+                    />
+                  )}
+                </div>
+              );
+            })
+          )}
         </div>
       </div>
 

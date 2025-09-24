@@ -7,8 +7,13 @@ import path from "path";
 import fs from "fs";
 import sgMail from "@sendgrid/mail";
 import dotenv from "dotenv";
+import { fileURLToPath } from "url";
 
 dotenv.config();
+
+// Get current directory for ES modules (Node.js 18 compatible)
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Check if SendGrid API key exists
 if (!process.env.SEND_GRID_KEY) {
@@ -18,8 +23,14 @@ if (!process.env.SEND_GRID_KEY) {
 sgMail.setApiKey(process.env.SEND_GRID_KEY as string);
 
 function resolveAssetsBasePath() {
-  const optimized = path.resolve(import.meta.dirname, "public", "project_assets");
-  const source = path.resolve(import.meta.dirname, "..", "project_assets");
+  const optimized = path.resolve(__dirname, "public", "project_assets");
+  const source = path.resolve(__dirname, "..", "project_assets");
+  
+  console.log('Checking optimized path:', optimized);
+  console.log('Checking source path:', source);
+  console.log('Optimized exists:', fs.existsSync(optimized));
+  console.log('Source exists:', fs.existsSync(source));
+  
   if (fs.existsSync(optimized)) return optimized;
   return source;
 }
